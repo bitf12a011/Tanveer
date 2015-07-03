@@ -1,0 +1,24 @@
+﻿@model MyWebsite.Models.Laptop
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*ViewBag.Title = "LDetails";*@
+
+
+
+
+<div class="center_content">
+    <div class="center_title_bar">Laptop Detail</div>
+    <div class="prod_box">
+        <div class="top_prod_box"></div>
+        <div class="center_prod_box">
+            <div class="product_title"><a href="details.html">@Model.LModel</a></div>
+            <div class="product_img"><a href="details.html"><img src="~/images/laptops/@Model.Limage" alt="" border="0" /></a></div>
+            <div class="prod_price"><span class="reduce">90,000</span> <span class="price">@Model.LPrice</span></div>
+            <div class="product_title"><a href="details.html">@Model.LDescription</a></div>
+            <div class="product_title"><a href="details.html">@Model.LCompany</a></div>
+        </div>
+        <div class="bottom_prod_box"></div>
+        <div class="prod_details_tab"> <a href="#" title="header=[Add to cart] body=[&nbsp;] fade=[on]"><img src="~/images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]"><img src="~/images/favs.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Gifts] body=[&nbsp;] fade=[on]"><img src="~/images/favorites.gif" alt="" border="0" class="left_bt" /></a> <a href="/Laptop/LDetails/@Model.Id" class="prod_details">details</a> </div>
+    </div>
+</div>
